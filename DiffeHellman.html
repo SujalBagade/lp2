@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Diffe Hellman's Key Exchange Algorithm</h1>
+    <script>
+        const prime = 79;
+        const generator = 22;
+        const a = 44;
+        const b = 4;
+        const pa = Math.pow(generator,a)%prime;
+        const pb = Math.pow(generator,b)%prime;
+        const sskeya = Math.pow(pb,a)%prime;
+        const sskeyb = Math.pow(pa,b)%prime;
+
+        console.log("Shared Secret key calculated by alice: "+sskeya);
+        console.log("Shared Secret key calculated by bob: "+sskeyb);
+
+
+    </script>
+</body>
+</html>
